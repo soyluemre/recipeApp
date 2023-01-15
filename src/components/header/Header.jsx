@@ -5,7 +5,6 @@ import {
   FoodInput,
   FormContainer,
   HeaderContainer,
-  MainHeader,
   Select,
 } from "./Header.style";
 
@@ -16,7 +15,6 @@ const Header = ({ setQuery, setSelectedMeal, mealType, getData }) => {
   };
   return (
     <HeaderContainer>
-      <MainHeader>Recipe App</MainHeader>
       <FormContainer onSubmit={handleSubmit}>
         <FoodInput
           onChange={(e) => setQuery(e.target.value)}

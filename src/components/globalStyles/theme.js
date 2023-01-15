@@ -1,8 +1,9 @@
 export const theme = {
   colors: {
-    navbarBgColor: "#de8e8e",
-    mainColor: "red",
-    linkColor: "white",
+    navbarBgColor: "#205375",
+    mainColor: "#EFEFEF",
+    linkColor: "#DFF6FF",
+    hoverColor: "#ECB365",
   },
 
   screens: {

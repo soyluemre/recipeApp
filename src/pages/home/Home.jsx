@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 import Header from "../../components/header/Header";
 import Cards from "../../components/cards/Cards";
-import { HomeImg, ImgDiv } from "./Home.style";
+import { HeaderText, HomeImg, ImgDiv } from "./Home.style";
 import homeSvg from "../../assets/home.svg";
 
 const Home = () => {
@@ -47,7 +47,11 @@ const Home = () => {
           <HomeImg src={homeSvg} />
         </ImgDiv>
       )}
-      <Cards />
+      {recipes?.length === 0 && (
+        <HeaderText>The Food Can Not Be Found</HeaderText>
+      )}
+
+      {recipes?.length > 0 && <Cards recipes={recipes} />}
     </div>
   );
 };
