@@ -1,12 +1,22 @@
 import React, { useState } from "react";
-import { Nav, Brand, Menu, MenuLink, Hamburger } from "./Navbar.style";
+import {
+  Nav,
+  Brand,
+  Menu,
+  MenuLink,
+  Hamburger,
+  BrandLogo,
+} from "./Navbar.style";
 import { GiHamburgerMenu } from "react-icons/gi";
+import cookLogo from "../../assets/cookLogo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Nav justify="space-between" wrap="wrap">
-      <Brand to="/">Recipe App</Brand>
+      <Brand to="/">
+        <BrandLogo src={cookLogo} alt="" />
+      </Brand>
 
       <Hamburger onClick={() => setIsOpen(!isOpen)}>
         <GiHamburgerMenu />

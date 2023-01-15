@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 export const Nav = styled(Flex)`
   padding: 0.4rem 1.5rem;
   background-color: ${({ theme }) => theme.colors.navbarBgColor};
-  opacity: 0.9;
 `;
 
 export const Brand = styled(Link)`
@@ -17,6 +16,11 @@ export const Brand = styled(Link)`
   @media (max-width: ${({ theme }) => theme.screens.lg}) {
     font-size: 1.3rem;
   }
+`;
+
+export const BrandLogo = styled.img`
+  margin-left: 10px;
+  width: 40px;
 `;
 
 export const Menu = styled(Flex)`
@@ -33,7 +37,7 @@ export const MenuLink = styled(Link)`
   text-align: center;
   padding: 1rem 1.3rem;
   cursor: pointer;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   text-decoration: none;
   color: ${({ theme }) => theme.colors.linkColor};
   transition: all 0.2s ease-in;

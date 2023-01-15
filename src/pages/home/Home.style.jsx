@@ -11,8 +11,16 @@ export const HomeImg = styled.img`
   max-width: 750px;
 `;
 
+export const ThinkingImg = styled.img`
+  width: 50%;
+  max-width: 450px;
+`;
+
 export const HeaderText = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2rem;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.navbarBgColor};
+  width: 80%;
+  margin: auto;
   color: ${({ theme }) => theme.colors.navbarBgColor};
   text-align: center;
 `;
