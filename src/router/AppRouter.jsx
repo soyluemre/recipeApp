@@ -16,7 +16,10 @@ const AppRouter = () => {
       <GlobalStyles />
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="https://soyluemre.github.io/recipeApp/"
+          element={<Home />}
+        />
         <Route path="login" element={<Login />} />
         <Route path="about" element={<PrivateRouter />}>
           <Route path="" element={<About />} />

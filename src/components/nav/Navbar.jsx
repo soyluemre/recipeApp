@@ -29,7 +29,7 @@ const Navbar = () => {
   };
   return (
     <Nav justify="space-between" wrap="wrap">
-      <Brand to="/">
+      <Brand to="https://soyluemre.github.io/recipeApp/">
         <BrandLogo src={cookLogo} alt="" />
       </Brand>
 
@@ -38,7 +38,7 @@ const Navbar = () => {
       </Hamburger>
 
       <Menu onClick={() => setIsOpen(false)} isOpen={isOpen}>
-        <MenuLink to="/">Home</MenuLink>
+        <MenuLink to="https://soyluemre.github.io/recipeApp/">Home</MenuLink>
         <MenuLink to="about">About</MenuLink>
         {/* <MenuLink to="register">Register</MenuLink> */}
         {login ? (
