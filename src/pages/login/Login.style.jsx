@@ -50,7 +50,7 @@ export const StyledInput = styled.input`
     height: 1.5rem;
     font-size: 0.8rem;
     width: 13rem;
-    margin: 1rem;
+    margin: 0.5rem;
     text-indent: 1rem;
   }
 `;
