@@ -8,8 +8,8 @@ export const LoginContainer = styled(Flex)`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  @media (max-width: ${({ theme }) => theme.screens.md}) {
-    height: 90vh;
+  @media (max-width: ${({ theme }) => theme.screens.lg}) {
+    height: 100vh;
   }
 `;
 
@@ -21,11 +21,12 @@ export const FormContainer = styled(Flex)`
   border-radius: 40%;
   padding: 0.5rem;
   flex-direction: column;
-  @media (max-width: ${({ theme }) => theme.screens.md}) {
-    width: 23rem;
-    height: 25rem;
+  @media (max-width: ${({ theme }) => theme.screens.lg}) {
+    width: 20rem;
+    height: 20rem;
     max-width: 25rem;
-    background: rgba(198, 198, 198, 0.5);
+    margin-top: -7rem;
+    background: rgba(150, 179, 226, 0.5);
   }
 `;
 
@@ -45,10 +46,10 @@ export const StyledInput = styled.input`
     transition: all 1s;
     border: none;
   }
-  @media (max-width: ${({ theme }) => theme.screens.md}) {
-    height: 2rem;
-    font-size: 1.2rem;
-    width: 15rem;
+  @media (max-width: ${({ theme }) => theme.screens.lg}) {
+    height: 1.5rem;
+    font-size: 0.8rem;
+    width: 13rem;
     margin: 1rem;
     text-indent: 1rem;
   }
@@ -74,9 +75,9 @@ export const StyledButton = styled.button`
     transition: all 0.7s;
     color: ${({ theme }) => theme.colors.hoverColor};
   }
-  @media (max-width: ${({ theme }) => theme.screens.md}) {
-    font-size: 1.2rem;
-    padding: 0.4rem;
+  @media (max-width: ${({ theme }) => theme.screens.lg}) {
+    font-size: 0.9rem;
+    padding: 0.1rem;
     cursor: pointer;
   }
 `;
@@ -84,6 +85,10 @@ export const StyledButton = styled.button`
 export const StyledImg = styled.img`
   width: 100px;
   margin: 0.5rem;
+  @media (max-width: ${({ theme }) => theme.screens.lg}) {
+    width: 50px;
+    margin: 1rem;
+  }
 `;
 
 export const StyledText = styled(Link)`
@@ -95,7 +100,7 @@ export const StyledText = styled(Link)`
     letter-spacing: 2px;
     transition: all 1s;
   }
-  @media (max-width: ${({ theme }) => theme.screens.md}) {
-    font-size: 1rem;
+  @media (max-width: ${({ theme }) => theme.screens.lg}) {
+    font-size: 0.7rem;
   }
 `;

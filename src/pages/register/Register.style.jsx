@@ -8,7 +8,7 @@ export const LoginContainer = styled(Flex)`
   background-size: cover;
   background-position: center;
   @media (max-width: ${({ theme }) => theme.screens.lg}) {
-    height: 90vh;
+    height: 100vh;
   }
 `;
 
@@ -21,10 +21,11 @@ export const FormContainer = styled(Flex)`
   padding: 0.5rem;
   flex-direction: column;
   @media (max-width: ${({ theme }) => theme.screens.lg}) {
-    width: 23rem;
-    height: 25rem;
+    width: 20rem;
+    height: 20rem;
     max-width: 25rem;
-    background: rgba(198, 198, 198, 0.5);
+    margin-top: -7rem;
+    background: rgba(150, 179, 226, 0.5);
   }
 `;
 
@@ -45,10 +46,10 @@ export const StyledInput = styled.input`
     border: none;
   }
   @media (max-width: ${({ theme }) => theme.screens.lg}) {
-    height: 1.5rem;
-    font-size: 1.2rem;
-    width: 15rem;
-    margin: 1rem;
+    height: 1.3rem;
+    font-size: 0.8rem;
+    width: 13rem;
+    margin: 0.5rem;
     text-indent: 1rem;
   }
 `;
@@ -69,18 +70,23 @@ export const StyledButton = styled.button`
   cursor: pointer;
   &:hover {
     background: rgba(11, 11, 11, 0.6);
+    transition: box-shadow 0.7s;
     transition: all 0.7s;
     color: ${({ theme }) => theme.colors.hoverColor};
   }
   @media (max-width: ${({ theme }) => theme.screens.lg}) {
-    padding: 0rem;
+    font-size: 0.8rem;
+    width: 13rem;
+    padding: 0;
+    cursor: pointer;
+    margin: 0.4rem auto;
   }
 `;
 
 export const StyledImg = styled.img`
-  width: 200px;
-  margin: 0.5rem;
+  width: 140px;
   @media (max-width: ${({ theme }) => theme.screens.lg}) {
-    width: 100px;
+    width: 70px;
+    margin: 0.5rem;
   }
 `;
