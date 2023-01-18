@@ -14,7 +14,7 @@ const Cards = ({ recipes }) => {
             <Image src={recipe.image || defaultImage} />
             <Button
               onClick={() =>
-                navigate("detail", { state: recipe, replace: false })
+                navigate("/detail", { state: recipe, replace: false })
               }
             >
               View More

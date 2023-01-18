@@ -12,25 +12,24 @@ import cookLogo from "../../assets/cookLogo.png";
 import { useContext } from "react";
 import { LoginContext } from "../../context/LoginContext";
 import { useNavigate } from "react-router-dom";
-import { Select } from "../header/Header.style";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { login, setLogin, user } = useContext(LoginContext);
+  const { login, setLogin } = useContext(LoginContext);
   const navigate = useNavigate();
 
   const handleLogout = () => {
     if (login) {
       sessionStorage.clear();
       setLogin(false);
-      navigate("/");
+      navigate("/recipeApp");
     } else {
     }
   };
   return (
     <Nav justify="space-between" wrap="wrap">
-      <Brand to="/">
-        <BrandLogo src={cookLogo} alt="" />
+      <Brand to="/recipeApp">
+        <BrandLogo src={cookLogo} />
       </Brand>
 
       <Hamburger onClick={() => setIsOpen(!isOpen)}>
@@ -38,20 +37,15 @@ const Navbar = () => {
       </Hamburger>
 
       <Menu onClick={() => setIsOpen(false)} isOpen={isOpen}>
-        <MenuLink to="/">Home</MenuLink>
+        <MenuLink to="/recipeApp">Home</MenuLink>
         <MenuLink to="about">About</MenuLink>
-        {/* <MenuLink to="register">Register</MenuLink> */}
         {login ? (
-          <>
-            <MenuLink onClick={handleLogout} to="/">
-              Logout
-            </MenuLink>
-
-            {/* <MenuLink to="">Welcome {user?.name && user?.surname}</MenuLink> */}
-          </>
+          <MenuLink onClick={handleLogout} to="/recipeApp">
+            Logout
+          </MenuLink>
         ) : (
           <>
-            <MenuLink onClick={handleLogout} to="login">
+            <MenuLink onClick={handleLogout} to="/login">
               Login
             </MenuLink>
           </>
