@@ -20,7 +20,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     const getItem = sessionStorage.getItem("user");
     if (getItem) {
-      navigate("https://soyluemre.github.io/recipeApp");
+      navigate("/");
       e.preventDefault();
       setLogin(true);
     } else {

@@ -23,13 +23,13 @@ const Navbar = () => {
     if (login) {
       sessionStorage.clear();
       setLogin(false);
-      navigate("https://soyluemre.github.io/recipeApp");
+      navigate("/");
     } else {
     }
   };
   return (
     <Nav justify="space-between" wrap="wrap">
-      <Brand to="https://soyluemre.github.io/recipeApp">
+      <Brand to="/">
         <BrandLogo src={cookLogo} alt="" />
       </Brand>
 
@@ -38,7 +38,7 @@ const Navbar = () => {
       </Hamburger>
 
       <Menu onClick={() => setIsOpen(false)} isOpen={isOpen}>
-        <MenuLink to="https://soyluemre.github.io/recipeApp/">Home</MenuLink>
+        <MenuLink to="/">Home</MenuLink>
         <MenuLink to="about">About</MenuLink>
         {/* <MenuLink to="register">Register</MenuLink> */}
         {login ? (
