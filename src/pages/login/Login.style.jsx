@@ -51,6 +51,7 @@ export const StyledInput = styled.input`
     font-size: 0.8rem;
     width: 13rem;
     margin: 0.5rem;
+
     text-indent: 1rem;
   }
 `;
@@ -77,8 +78,10 @@ export const StyledButton = styled.button`
   }
   @media (max-width: ${({ theme }) => theme.screens.lg}) {
     font-size: 0.9rem;
-    padding: 0.1rem;
+    padding: 0rem;
     cursor: pointer;
+    width: 13rem;
+    margin: 0.5rem auto;
   }
 `;
 
