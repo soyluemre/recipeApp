@@ -21,7 +21,6 @@ const Header = ({ setQuery, setSelectedMeal, mealType, getData }) => {
           type="text"
           placeholder="Search"
         />
-        <Button type="submit">Search</Button>
         <Select
           name="mealType"
           id="mealType"
@@ -35,6 +34,7 @@ const Header = ({ setQuery, setSelectedMeal, mealType, getData }) => {
             );
           })}
         </Select>
+        <Button type="submit">Search</Button>
       </FormContainer>
     </HeaderContainer>
   );

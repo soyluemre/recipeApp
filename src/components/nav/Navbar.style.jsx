@@ -3,8 +3,9 @@ import Flex from "../globalStyles/Flex.style";
 import { Link } from "react-router-dom";
 
 export const Nav = styled(Flex)`
-  padding: 0.4rem 1.5rem;
+  padding: 0 1.5rem;
   background-color: ${({ theme }) => theme.colors.navbarBgColor};
+  border-bottom: 3px solid ${({ theme }) => theme.colors.hoverColor};
 `;
 
 export const Brand = styled(Link)`

@@ -7,8 +7,10 @@ export const ImgDiv = styled.div`
 `;
 
 export const HomeImg = styled.img`
-  width: 80%;
-  max-width: 750px;
+  width: 400px;
+  @media (max-width: ${({ theme }) => theme.screens.lg}) {
+    width: 200px;
+  }
 `;
 
 export const ThinkingImg = styled.img`
@@ -23,4 +25,7 @@ export const HeaderText = styled.h1`
   margin: auto;
   color: ${({ theme }) => theme.colors.navbarBgColor};
   text-align: center;
+  @media (max-width: ${({ theme }) => theme.screens.lg}) {
+    font-size: 1.3rem;
+  }
 `;

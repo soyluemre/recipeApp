@@ -15,10 +15,13 @@ const Detail = () => {
   return (
     <DetailContainer>
       <HeaderContainer>
-        <h1>{state.label}</h1>
         <img src={diet} alt="dietImg" />
+        <h1>{state.label}</h1>
       </HeaderContainer>
       <DetailPart>
+        <ImageContainer>
+          <img src={state.image} alt="FoodImage" />
+        </ImageContainer>
         <OtherPart>
           <h3>Nutrients</h3>
 
@@ -50,15 +53,12 @@ const Detail = () => {
             </p>
           ))}
         </OtherPart>
-        <ImageContainer>
-          <img src={state.image} alt="FoodImage" />
-        </ImageContainer>
 
         <IngContainer>
           {state.ingredientLines.map((ingredient, index) => (
             <div>
               <p>
-                {index + 1}) {ingredient}
+                <span>{index + 1})</span> {ingredient}
               </p>
             </div>
           ))}

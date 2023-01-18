@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Flex from "../../components/globalStyles/Flex.style";
+import { Link } from "react-router-dom";
 
 export const LoginContainer = styled(Flex)`
   height: 100vh;
@@ -7,9 +8,12 @@ export const LoginContainer = styled(Flex)`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  @media (max-width: ${({ theme }) => theme.screens.md}) {
+    height: 90vh;
+  }
 `;
 
-export const FromContainer = styled(Flex)`
+export const FormContainer = styled(Flex)`
   width: 40rem;
   height: 40rem;
   max-width: 50rem;
@@ -17,11 +21,12 @@ export const FromContainer = styled(Flex)`
   border-radius: 40%;
   padding: 0.5rem;
   flex-direction: column;
-`;
-
-export const Header = styled.h1`
-  color: white;
-  font-size: 2rem;
+  @media (max-width: ${({ theme }) => theme.screens.md}) {
+    width: 23rem;
+    height: 25rem;
+    max-width: 25rem;
+    background: rgba(198, 198, 198, 0.5);
+  }
 `;
 
 export const StyledInput = styled.input`
@@ -29,16 +34,23 @@ export const StyledInput = styled.input`
   font-size: 1.4rem;
   width: 28rem;
   border-radius: 5px;
-  background: rgba(11, 11, 11, 0.6);
+  background: rgba(0, 0, 0, 0.6);
   border: none;
-  color: white;
+  color: ${({ theme }) => theme.colors.hoverColor};
   margin: 1rem;
   text-indent: 1rem;
   &:focus {
-    background: rgba(112, 7, 7, 0.716);
+    background: ${({ theme }) => theme.colors.navbarBgColor};
     border: 1px solid red;
     transition: all 1s;
     border: none;
+  }
+  @media (max-width: ${({ theme }) => theme.screens.md}) {
+    height: 2rem;
+    font-size: 1.2rem;
+    width: 15rem;
+    margin: 1rem;
+    text-indent: 1rem;
   }
 `;
 
@@ -49,7 +61,7 @@ export const StyledForm = styled.form`
 
 export const StyledButton = styled.button`
   font-size: 1.4rem;
-  background: rgba(112, 7, 7, 0.716);
+  background: ${({ theme }) => theme.colors.navbarBgColor};
   border-radius: 5px;
   color: white;
   margin: 1rem;
@@ -60,11 +72,30 @@ export const StyledButton = styled.button`
     background: rgba(11, 11, 11, 0.6);
     transition: box-shadow 0.7s;
     transition: all 0.7s;
-    color: red;
+    color: ${({ theme }) => theme.colors.hoverColor};
+  }
+  @media (max-width: ${({ theme }) => theme.screens.md}) {
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    cursor: pointer;
   }
 `;
 
 export const StyledImg = styled.img`
-  width: 200px;
-  margin: 1rem;
+  width: 100px;
+  margin: 0.5rem;
+`;
+
+export const StyledText = styled(Link)`
+  color: #c7e1f1;
+  font-size: 1.2rem;
+  text-align: center;
+  &:hover {
+    color: #96d7ff;
+    letter-spacing: 2px;
+    transition: all 1s;
+  }
+  @media (max-width: ${({ theme }) => theme.screens.md}) {
+    font-size: 1rem;
+  }
 `;

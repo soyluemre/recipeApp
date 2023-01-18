@@ -4,7 +4,7 @@ import { useState } from "react";
 import Header from "../../components/header/Header";
 import Cards from "../../components/cards/Cards";
 import { HeaderText, HomeImg, ImgDiv, ThinkingImg } from "./Home.style";
-import homeSvg from "../../assets/home.svg";
+import homeSvg from "../../assets/chef.png";
 import thinkFace from "../../assets/thinkingFace.png";
 
 const Home = () => {
@@ -29,11 +29,6 @@ const Home = () => {
       alert("Fill The Form");
     }
   };
-
-  console.log(recipes);
-  // useEffect(() => {
-  //   getData();
-  // }, []);
 
   return (
     <div>
