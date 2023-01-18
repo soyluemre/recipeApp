@@ -23,13 +23,13 @@ const Navbar = () => {
     if (login) {
       sessionStorage.clear();
       setLogin(false);
-      navigate("https://soyluemre.github.io/recipeApp/");
+      navigate("https://soyluemre.github.io/recipeApp");
     } else {
     }
   };
   return (
     <Nav justify="space-between" wrap="wrap">
-      <Brand to="https://soyluemre.github.io/recipeApp/">
+      <Brand to="https://soyluemre.github.io/recipeApp">
         <BrandLogo src={cookLogo} alt="" />
       </Brand>
 

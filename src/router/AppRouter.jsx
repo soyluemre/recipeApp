@@ -17,7 +17,7 @@ const AppRouter = () => {
       <Navbar />
       <Routes>
         <Route
-          path="https://soyluemre.github.io/recipeApp/"
+          path="https://soyluemre.github.io/recipeApp"
           element={<Home />}
         />
         <Route path="login" element={<Login />} />
