@@ -23,7 +23,7 @@ const Navbar = () => {
     if (login) {
       sessionStorage.clear();
       setLogin(false);
-      navigate("/");
+      navigate("https://soyluemre.github.io/recipeApp/");
     } else {
     }
   };
